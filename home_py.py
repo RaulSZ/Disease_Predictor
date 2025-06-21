@@ -29,7 +29,7 @@ inputdata  = np.array([temp,wbc,heart_rate,age]).reshape(1,-1)
 if st.button('Predict'):
   res = ada.predict(inputdata)[0]
   st.subheader('Results')
-  st.write(f"Prediction: {'Not İll' if res == 1 else 'Not İll'}")
+  st.write(f"Prediction: {'İll' if res == 1 else 'Not İll'}")
 
 st.subheader('Feature importances: ')
 st.image('feature_importance.png')
