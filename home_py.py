@@ -25,7 +25,7 @@ wbc = st.slider('WBC Count', 0.0, 16.0, 7.5)
 heart_rate = st.slider('Heart Rate', 0, 50, 140)
 age = st.slider('Age', 0, 100, 40)
 
-input_data  = np.array([temp,wbc,heart_rate,age])
+input_data  = np.array([temp,wbc,heart_rate,age]).reshape(-1,1)
 if st.button('Predict'):
   rf_res = ada.predict(input_data)[0]
   st.subheader('Results')
